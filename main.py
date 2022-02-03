@@ -27,15 +27,14 @@ def login(username, password):
 
         while True:
             browser.get("https://www.instagram.com/explore/people/")
-            time.sleep(3)
+            time.sleep(random.randrange(180,240))
             for i in range(1,20):
                 try:
                     follow_action = browser.find_element_by_xpath(f"/html/body/div[1]/section/main/div/div[2]/div/div/div[{i}]/div[3]/button").click()
                     print("Подписка оформлена")
-                    time.sleep(120)    
+                    time.sleep(random.randrange(180,240))    
                 except:
                     pass
-        time.sleep(10)
 
 
         browser.close()
